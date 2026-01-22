@@ -11,7 +11,7 @@
 <header class="header">
   <div class="container nav">
     <div class="logo">
-      <span class="logo-box">🏢</span>
+      <div class="logoIcon">🏢</div>
       <div>
         <h3>Build Sure</h3>
         <p>Construction</p>
@@ -28,7 +28,7 @@
     <button class="hamburger" id="hamburger">☰</button>
   </div>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobileMenu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -38,66 +38,34 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="center">Our <span class="italic">Projects</span></h2>
+    <h2 class="center" style="font-family:Playfair Display,serif;font-size:40px;font-weight:800">
+      Our <span class="italic">Projects</span>
+    </h2>
 
     <div class="tabs">
       <button class="tab active">Ongoing Projects</button>
       <button class="tab">Completed Orders</button>
     </div>
 
-    <div class="project-grid" id="projectGrid">
-      <!-- Cards injected from JS -->
-    </div>
+    <div class="projectGrid" id="projectGrid"></div>
   </div>
 </section>
 
-<section class="section light">
-  <div class="container contact-grid">
-    <div>
-      <h2>Get a Project <br/> in mind</h2>
-      <div class="contact-mini">
-        <div class="contact-mini-item">
-          <span class="icon">📞</span>
-          <div>
-            <h4>Phone</h4>
-            <p class="muted">+91 9999999999</p>
-          </div>
-        </div>
-
-        <div class="contact-mini-item">
-          <span class="icon">✉️</span>
-          <div>
-            <h4>Email</h4>
-            <p class="muted">example@contact.com</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <form class="form">
-      <input type="text" placeholder="Enter your name" required/>
-      <input type="email" placeholder="Enter your email address" required/>
-      <textarea rows="5" placeholder="Enter your message"></textarea>
-      <button class="btn primary" type="submit">SEND MESSAGE</button>
-    </form>
-  </div>
-</section>
-
-<!-- POPUP GALLERY -->
+<!-- POPUP -->
 <div class="modal" id="modal">
-  <div class="modal-content">
-    <button class="modal-close" id="modalClose">✕</button>
-    <button class="modal-nav left" id="prevBtn">‹</button>
-    <img id="modalImg" src="" alt=""/>
-    <button class="modal-nav right" id="nextBtn">›</button>
+  <div class="modalContent">
+    <button class="modalClose" id="modalClose">✕</button>
+    <button class="modalNav left" id="prevBtn">‹</button>
+    <img id="modalImg" src="" alt="">
+    <button class="modalNav right" id="nextBtn">›</button>
   </div>
 </div>
 
 <footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-brand">
+  <div class="container footerGrid">
+    <div>
       <div class="logo">
-        <span class="logo-box">🏢</span>
+        <div class="logoIcon">🏢</div>
         <div>
           <h3>Build Sure</h3>
           <p>Construction</p>
