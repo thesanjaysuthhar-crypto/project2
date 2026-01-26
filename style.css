@@ -67,10 +67,10 @@ img{width:100%;display:block}
 }
 .heroContent h1{
   font-family:"Playfair Display",serif;
-  font-size:70px;
+  font-size:64px;
   color:#fff;
-  font-weight:800;
-  line-height:1.04;
+  font-weight:600;
+  line-height:1.2;
   letter-spacing:1px;
 }
 .heroContent h1 span{font-style:italic;opacity:.95}
