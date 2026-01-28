@@ -1,11 +1,13 @@
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap');
+
+/* ================= RESET ================= */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-/* ROOT */
+/* ================= ROOT ================= */
 :root{
   --dark:#0f141a;
   --light:#eef2f5;
@@ -15,24 +17,24 @@
   --purple:#3f2bd2;
 }
 
+/* ================= GLOBAL ================= */
 body{
   font-family:Inter, sans-serif;
   background:#fff;
   color:#0b0f14;
 }
-
 a{text-decoration:none;color:inherit}
 img{width:100%;display:block}
 
-/* CONTAINER */
 .container{
   width:min(1120px,92%);
   margin:auto;
 }
 
-/* SECTIONS */
 .sectionWhite{padding:80px 0}
 .sectionLight{padding:80px 0;background:var(--light)}
+.italic{font-style:italic}
+.muted{color:var(--muted)}
 
 /* ================= HEADER ================= */
 .header{
@@ -47,11 +49,44 @@ img{width:100%;display:block}
   align-items:center;
   padding:16px 0;
 }
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  color:#fff;
+}
+.brand-icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#0b0f14;
+  border:1px solid rgba(255,255,255,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brand h3{font-size:18px;font-weight:900}
+.brand p{font-size:12px;opacity:.7}
+
+.menu{
+  display:flex;
+  gap:22px;
+  color:#fff;
+  font-size:14px;
+}
+.menu a{opacity:.8}
+.menu a.active{
+  opacity:1;
+  border-bottom:2px solid #fff;
+  padding-bottom:5px;
+}
+
+.hamburger{display:none}
 
 /* ================= HERO ================= */
 .heroHome{
   position:relative;
-  min-height:100vh;
+  min-height:85vh;
   background:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop") center/cover no-repeat;
 }
 .heroOverlay{
@@ -62,7 +97,7 @@ img{width:100%;display:block}
 .heroContent{
   position:relative;
   z-index:2;
-  padding:180px 0 160px;
+  padding:150px 0;
 }
 .heroContent h1{
   font-family:"Playfair Display",serif;
@@ -72,13 +107,48 @@ img{width:100%;display:block}
   line-height:1.05;
 }
 
+.socialBar{
+  position:absolute;
+  right:25px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.socialBar a{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
 /* ================= STATS ================= */
 .statsRowHome{
-  margin-top:-90px;
+  margin-top:-70px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
+.statHome{
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid var(--border);
+}
+.statHome h3{font-size:32px;font-weight:900}
+.statHome p{font-size:13px;margin-top:4px}
+.miniImg{
+  margin-top:12px;
+  border-radius:14px;
+  overflow:hidden;
+  height:90px;
+}
+.miniImg img{height:100%;object-fit:cover}
 
 /* ================= ABOUT ================= */
 .aboutCompany{
@@ -87,8 +157,46 @@ img{width:100%;display:block}
   grid-template-columns:1fr 1.1fr;
   gap:26px;
 }
+.aboutImages{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.bigImg{
+  grid-row:span 2;
+  border-radius:18px;
+  overflow:hidden;
+}
+.bigImg img{height:100%;object-fit:cover}
+.smallImgs img{
+  height:170px;
+  border-radius:18px;
+  object-fit:cover;
+}
+.aboutText h2{
+  font-family:"Playfair Display",serif;
+  font-size:46px;
+  font-weight:900;
+}
+.aboutText p{font-size:14px;line-height:1.9;margin-top:10px}
+
+.btnPurple{
+  margin-top:14px;
+  background:var(--purple);
+  color:#fff;
+  border:none;
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+}
 
 /* ================= SERVICES ================= */
+.bigTitle{
+  font-family:"Playfair Display",serif;
+  font-size:52px;
+  font-weight:900;
+}
 .serviceGrid{
   margin-top:30px;
   display:grid;
@@ -96,19 +204,120 @@ img{width:100%;display:block}
   gap:16px;
 }
 .serviceCard{
-  background:linear-gradient(145deg,#4f46e5,#3f2bd2);
+  background:linear-gradient(180deg,#4f46e5,#3f2bd2);
   border-radius:18px;
-  padding:20px;
+  padding:22px;
   color:#fff;
-  min-height:260px;
+  min-height:280px;
+}
+.serviceIcon{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:rgba(255,255,255,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:16px;
+}
+.serviceCard h3{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.6px;
+}
+.serviceCard p{
+  font-size:12px;
+  opacity:.9;
+  margin-top:10px;
+  line-height:1.7;
 }
 
 /* ================= PROJECTS ================= */
+.centerHeading2{
+  margin-top:60px;
+  text-align:center;
+  font-family:"Playfair Display",serif;
+  font-size:46px;
+  font-weight:900;
+}
 .projectGridHome{
   margin-top:26px;
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:18px;
+}
+.projectCardHome{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+.projectCardHome img{
+  height:240px;
+  object-fit:cover;
+}
+.projectInfoHome{
+  padding:14px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+.arrowBtn{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid #cbd5e1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:70px;
+}
+.testHeader h2{
+  font-family:"Playfair Display",serif;
+  font-size:52px;
+}
+.roundNav button{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:none;
+  background:var(--purple);
+  color:#fff;
+  font-weight:900;
+}
+.testGrid{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+.testCard{
+  background:#f8fafc;
+  padding:20px;
+  border-radius:18px;
+}
+
+/* ================= TRUSTED ================= */
+.trustedTitle{
+  text-align:center;
+  font-family:"Playfair Display",serif;
+  font-size:48px;
+  margin-top:70px;
+}
+.logoRow{
+  display:flex;
+  justify-content:center;
+  gap:32px;
+  flex-wrap:wrap;
+  opacity:.7;
+  margin-top:20px;
 }
 
 /* ================= CONTACT ================= */
@@ -116,6 +325,27 @@ img{width:100%;display:block}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
+}
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.form input,
+.form textarea{
+  border:none;
+  border-bottom:1px solid #cbd5e1;
+  padding:10px;
+  outline:none;
+}
+.sendBtn{
+  align-self:flex-end;
+  background:var(--purple);
+  color:#fff;
+  border:none;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:900;
 }
 
 /* ================= FOOTER ================= */
@@ -149,42 +379,4 @@ img{width:100%;display:block}
 @media(max-width:680px){
   .serviceGrid,
   .footerGrid{grid-template-columns:1fr}
-}
-/* ===== FINAL FIXES FOR SAME TO SAME DESIGN ===== */
-
-/* HERO FULL SCREEN */
-.heroHome{
-  min-height:100vh;
-}
-.heroContent{
-  padding:180px 0 160px;
-}
-
-/* STATS OVERLAP */
-.statsRowHome{
-  margin-top:-90px;
-}
-
-/* ABOUT TEXT WIDTH */
-.aboutText{
-  max-width:460px;
-}
-
-/* PROJECT IMAGE HEIGHT */
-.projectCardHome img{
-  height:260px;
-  object-fit:cover;
-}
-
-/* CONTACT ALIGNMENT */
-.contactGrid{
-  align-items:center;
-}
-
-/* SERVICE HOVER (OPTIONAL BUT PREMIUM) */
-.serviceCard{
-  transition:.3s ease;
-}
-.serviceCard:hover{
-  transform:translateY(-6px);
 }
