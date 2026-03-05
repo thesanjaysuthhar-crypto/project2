@@ -1,355 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BuildSure - Smart Property</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f5f6fa;
-color:#333;
-}
-
-/* NAVBAR */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 80px;
-background:#0f172a;
-color:white;
-}
-
-header h2{
-font-weight:700;
-}
-
-nav a{
-color:white;
-margin-left:30px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#8b5cf6;
-}
-
-/* HERO */
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-display:flex;
-align-items:center;
-padding-left:80px;
-color:white;
-}
-
-.hero h1{
-font-size:60px;
-font-weight:700;
-line-height:1.1;
-}
-
-.hero button{
-margin-top:20px;
-padding:12px 30px;
-border:none;
-background:#8b5cf6;
-color:white;
-border-radius:30px;
-cursor:pointer;
-font-weight:600;
-}
-
-/* STATS */
-.stats{
-display:flex;
-justify-content:center;
-gap:80px;
-padding:60px 0;
-background:white;
-}
-
-.stat{
-text-align:center;
-}
-
-.stat h2{
-color:#8b5cf6;
-font-size:40px;
-}
-
-/* SERVICES */
-.services{
-padding:80px;
-text-align:center;
-}
-
-.services h2 span{
-color:#8b5cf6;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-margin-top:40px;
-}
-
-.service-card{
-background:linear-gradient(135deg,#6d28d9,#8b5cf6);
-color:white;
-padding:40px 20px;
-border-radius:15px;
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-/* PROJECTS */
-.projects{
-padding:80px;
-background:white;
-}
-
-.projects h2{
-text-align:center;
-margin-bottom:40px;
-}
-
-.project-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-}
-
-.project{
-background:#fff;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.project:hover{
-transform:scale(1.03);
-}
-
-.project img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.project-content{
-padding:20px;
-}
-
-.project-content h3{
-margin-bottom:10px;
-}
-
-/* CONTACT */
-.contact{
-padding:80px;
-display:flex;
-justify-content:space-between;
-background:#f9fafb;
-}
-
-.contact-left{
-width:40%;
-}
-
-.contact-right{
-width:50%;
-}
-
-.contact input,
-.contact textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:8px;
-}
-
-.contact button{
-background:#8b5cf6;
-color:white;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-}
-
-/* FOOTER */
-footer{
-background:#0f172a;
-color:white;
-padding:40px 80px;
-display:flex;
-justify-content:space-between;
-}
-
-footer ul{
-list-style:none;
-}
-
-footer ul li{
-margin-bottom:10px;
-}
-
-footer ul li a{
-color:white;
-text-decoration:none;
-font-size:14px;
-}
-
-footer ul li a:hover{
-color:#8b5cf6;
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Build Sure - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h2>BuildSure</h2>
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
-</nav>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-icon">🏢</div>
+      <div>
+        <h3>Build Sure</h3>
+        <p>Construction</p>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
+
+  <div class="mobileMenu" id="mobileMenu">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+  </div>
 </header>
 
-<section class="hero">
-<div>
-<h1>SMART <br> PROPERTY <br> INVESTMENTS</h1>
-<button>Explore More</button>
-</div>
+<section class="heroHome">
+  <div class="heroOverlay"></div>
+
+  <div class="container heroContent">
+    <h1>
+      SMART <br>
+      <span class="italic">PROPERTY</span> <br>
+      INVESTMENTS
+    </h1>
+  </div>
+
+  <div class="socialBar">
+    <a href="#">ig</a>
+    <a href="#">f</a>
+    <a href="#">yt</a>
+    <a href="#">x</a>
+  </div>
 </section>
 
-<section class="stats">
-<div class="stat">
-<h2>12+</h2>
-<p>Years Experience</p>
-</div>
-<div class="stat">
-<h2>68+</h2>
-<p>Skilled Members</p>
-</div>
-<div class="stat">
-<h2>25+</h2>
-<p>Projects Completed</p>
-</div>
+<section class="sectionLight">
+  <div class="container">
+    <div class="statsRowHome">
+      <div class="statHome">
+        <h3>12+</h3>
+        <p>Years of experience</p>
+        <div class="miniImg">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop">
+        </div>
+      </div>
+
+      <div class="statHome">
+        <h3>68+</h3>
+        <p>Skilled team members</p>
+        <div class="miniImg">
+          <img src="https://images.unsplash.com/photo-1600566753051-f0e1d3af0c1e?q=80&w=1200&auto=format&fit=crop">
+        </div>
+      </div>
+
+      <div class="statHome">
+        <h3>25+</h3>
+        <p>Projects completed</p>
+        <div class="miniImg">
+          <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop">
+        </div>
+      </div>
+    </div>
+
+    <div class="aboutCompany">
+      <div class="aboutImages">
+        <div class="bigImg">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1500&auto=format&fit=crop">
+        </div>
+        <div class="smallImgs">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1500&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1500&auto=format&fit=crop">
+        </div>
+      </div>
+
+      <div class="aboutText">
+        <h2>About <span class="italic">Company</span></h2>
+        <p class="muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus pretium aliquet.
+        </p>
+        <p class="muted">
+          Vestibulum maximus sem nec mauris semper efficitur. Ut a commodo felis.
+        </p>
+        <button class="btnPurple">READ MORE</button>
+      </div>
+    </div>
+
+    <div class="sectionWhite" style="padding-bottom:0">
+      <h2 class="bigTitle">We provide <span class="italic">Awesome</span><br/>services for you</h2>
+
+      <div class="serviceGrid">
+        <div class="serviceCard">
+          <div class="serviceIcon">🏢</div>
+          <h3>PROJECT PRE<br>CONSTRUCTION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="serviceCard lightCard">
+          <div class="serviceIcon">🏢</div>
+          <h3>PROJECT PRE<br>CONSTRUCTION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="serviceCard darkCard">
+          <div class="serviceIcon">🏢</div>
+          <h3>PROJECT PRE<br>CONSTRUCTION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="serviceCard lightCard">
+          <div class="serviceIcon">🏢</div>
+          <h3>PROJECT PRE<br>CONSTRUCTION</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <h2 class="centerHeading2">Our <span class="italic">Projects</span></h2>
+
+      <div class="projectGridHome">
+        <div class="projectCardHome">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop">
+          <div class="projectInfoHome">
+            <div>
+              <h4>KAMLA ENCLAVE</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="arrowBtn">➜</div>
+          </div>
+        </div>
+
+        <div class="projectCardHome">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000&auto=format&fit=crop">
+          <div class="projectInfoHome">
+            <div>
+              <h4>BABA SPINNERS</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="arrowBtn">➜</div>
+          </div>
+        </div>
+
+        <div class="projectCardHome">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2000&auto=format&fit=crop">
+          <div class="projectInfoHome">
+            <div>
+              <h4>KAMLA BOUTIQUE</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="arrowBtn">➜</div>
+          </div>
+        </div>
+
+        <div class="projectCardHome">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=2000&auto=format&fit=crop">
+          <div class="projectInfoHome">
+            <div>
+              <h4>KAMLA CRYSTALS</h4>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="arrowBtn">➜</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="viewMoreWrap">
+        <button class="btnPurple">VIEW MORE</button>
+      </div>
+
+      <div class="testHeader">
+        <h2>What People say<br>about us ?</h2>
+        <div class="roundNav">
+          <button>←</button>
+          <button>→</button>
+        </div>
+      </div>
+
+      <div class="testGrid">
+        <div class="testCard">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet interdum ipsum.
+          </p>
+          <div class="testUser">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop">
+            <div>
+              <b>Jhon Doe</b><br>
+              <span class="muted">Professional tag</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testCard">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet interdum ipsum.
+          </p>
+          <div class="testUser">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=800&auto=format&fit=crop">
+            <div>
+              <b>Jhon Doe</b><br>
+              <span class="muted">Professional tag</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="trustedTitle">Trusted by <span class="italic">Great</span> companies</h2>
+      <div class="logoRow">
+        <div>fs first stone</div>
+        <div>fs first stone</div>
+        <div>fs first stone</div>
+        <div>fs first stone</div>
+        <div>MIRAJ</div>
+        <div>MIRAJ</div>
+        <div>MIRAJ</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="services">
-<h2>We provide <span>Awesome</span> services</h2>
+<section class="sectionLight">
+  <div class="container contactGrid">
+    <div>
+      <h2>Get a Project<br>in mind</h2>
 
-<div class="service-grid">
-<div class="service-card">Project Pre Construction</div>
-<div class="service-card">Architecture Design</div>
-<div class="service-card">Interior Planning</div>
-<div class="service-card">Construction Management</div>
-</div>
+      <div class="iconRow">
+        <div class="iconBox">
+          <div class="iconCircle">📞</div>
+          <div>
+            <b>Phone</b><br>
+            <span class="muted">+41 9999999999</span>
+          </div>
+        </div>
+
+        <div class="iconBox">
+          <div class="iconCircle">✉️</div>
+          <div>
+            <b>Email</b><br>
+            <span class="muted">example@contact.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form">
+      <input type="text" placeholder="Enter your name">
+      <input type="email" placeholder="Enter your email address">
+      <textarea rows="4" placeholder="Enter your message"></textarea>
+      <button class="sendBtn">SEND MESSAGE</button>
+    </form>
+  </div>
 </section>
 
-<section class="projects">
-<h2>Our Projects</h2>
+<footer class="footer">
+  <div class="container footerGrid">
+    <div>
+      <div class="brand">
+        <div class="brand-icon">🏢</div>
+        <div>
+          <h3>Build Sure</h3>
+          <p>Construction</p>
+        </div>
+      </div>
+      <p class="muted">Orient Arcade, Chittor Road, Bhilwara, Rajasthan 311001</p>
+    </div>
 
-<div class="project-grid">
+    <div>
+      <h4>Company</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="projects.html">Projects</a>
+    </div>
 
-<div class="project">
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-<div class="project-content">
-<h3>Kamla Enclave</h3>
-<p>Luxury residential villas project.</p>
-</div>
-</div>
+    <div>
+      <h4>Legal</h4>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
 
-<div class="project">
-<img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
-<div class="project-content">
-<h3>Kamla Heights</h3>
-<p>Modern apartment building.</p>
-</div>
-</div>
+    <div>
+      <h4>Social Links</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter</a>
+    </div>
+  </div>
 
-<div class="project">
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
-<div class="project-content">
-<h3>Kamla Boutique</h3>
-<p>Premium shopping complex.</p>
-</div>
-</div>
-
-<div class="project">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858">
-<div class="project-content">
-<h3>Sharda Royal</h3>
-<p>Luxury duplex homes.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="contact">
-<div class="contact-left">
-<h2>Get a Project in mind</h2>
-<p>Phone: +91 9876543210</p>
-<p>Email: info@buildsure.com</p>
-</div>
-
-<div class="contact-right">
-<input type="text" placeholder="Enter your name">
-<input type="email" placeholder="Enter your email">
-<textarea rows="5" placeholder="Enter your message"></textarea>
-<button>Send Message</button>
-</div>
-</section>
-
-<footer>
-<div>
-<h3>BuildSure</h3>
-<p>Smart Real Estate Solutions</p>
-</div>
-
-<div>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Projects</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</div>
-
-<div>
-<ul>
-<li><a href="#">Facebook</a></li>
-<li><a href="#">Instagram</a></li>
-<li><a href="#">Twitter</a></li>
-</ul>
-</div>
+  <p class="copy">Copyright © 2026. All rights reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
